@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+table {
+  border-collapse: collapse;
+  /* height: 30px;
+  width: 20px; */
+}
+
+table th {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+table td {
+  border: 1px solid gray;
+  padding: 5px;
+  text-align: center;
+}
+
+
+
+.login {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 34px;
+}
+.login img {
+  height: 41px;
+}
+
+
+.error {
+  background-color: red;
+  color: white;
+}

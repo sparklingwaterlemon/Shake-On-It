@@ -1,0 +1,57 @@
+<%- include("../partials/header") %>
+<nav>
+  <a href="/"> Home Page </a>
+    <br><br>
+  <a href="/user/create"> Create Bet </a>
+    <br><br>
+  <a href="/user/addfriend"> Add Friend </a>
+    <br><br>
+  <a href="/user/profile"> Profile </a>
+    <br><br>  
+  <a href="/logout">LOG OUT</a>
+    <br><br>
+</nav>
+<main>
+
+
+<h1> User Page </h1>
+
+<h2> Your Active Games: </h2>
+
+<table>
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Description </th>
+      <th> Amount </th>
+      <th> Penalty </th>
+      <th> Expire Date </th>
+      <th> Winner </th>
+      <th> Player 1 </th>
+      <th> Player 2 </th>
+      <th> EDIT</th>
+    </tr>
+  </thead>
+
+  <% userGames.forEach((g)=>{ %>
+  <tbody>
+    <tr>
+      <td> <%= g.title %> </td>
+      <td> <%= g.description %> </td>
+      <td> <%= g.amount %> </td>
+      <td> <%= g.penalty %> </td>
+      <td> <%= g.expiration %> </td>
+      <td> <%= g.winner %> </td>
+      <td> <%= g.player1gamerTag %> </td>
+      <td> <%= g.player2gamerTag %> </td>
+      <td> <a href="/user/<%= g._id %>"> Edit Game </td>
+    </tr>
+  </tbody>
+  <% }) %>
+  
+</table>
+
+
+
+
+<%- include("../partials/footer") %>

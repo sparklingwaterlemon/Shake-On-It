@@ -1,0 +1,54 @@
+<%- include("../partials/header") %>
+
+<nav>
+    <a href="/user"> Go Back </a>
+</nav>
+<br><br>
+
+<div>
+    <h2> Your Gamer Tag: <%=SelectUser.gamerTag %> </h2>
+</div>
+<br>
+
+<div>
+    <h2> List of Current Friends </h2>
+    
+    <select name="friends">
+    <% SelectUser.friendTag.forEach(function(username){ %> 
+    
+        <option value="1"> <%= username %> </option>
+    
+        <% }) %>
+    </select>
+</div>
+<br><br><br>
+
+<div>
+    <h1> Add Friend </h1>
+    <h3> Find a user! </h3>
+    
+
+    <form action="/user/addfriend/scroll" method="POST">
+        
+        <select name="scroll">   
+            <% AllUsers.forEach(function(g){ %>
+                <option value="<%= g.gamerTag %>"> <%= g.gamerTag %> --- <%= g.name %> --- <%= g.email %></option>
+            <% }) %>
+        </select>
+        <input type="submit" value="Add Friend"> 
+    </form>
+</div>
+<br><br>
+
+<div>
+   <h3> Search by Gamer Tag: </h3>
+    <form action="/user/addfriend/" method="POST">
+        <input type="text" autocomplete="off" name="search" placeholder="Enter New Gamer Tag">
+        <input type="submit" value="Add Friend">
+    </form>
+</div>
+
+
+
+
+<%- include("../partials/footer") %>

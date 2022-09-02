@@ -1,0 +1,34 @@
+<%- include("../partials/header") %>
+<nav>
+  <a href="/user"> User Page </a>
+    <br><br>
+  <a href="/logout">LOG OUT</a>
+    <br><br>
+</nav>
+<main>
+
+<h1> Profile Page </h1>
+    
+
+<div>
+  <h2>
+    Gamertag: <%= SelectUser.gamerTag %>
+  </h2> <br>
+
+  Name: <%= SelectUser.name %> <br>
+  Email: <%= SelectUser.email %> <br>
+  Friend Rating Score: <%= SelectUser.friendRatingScore %> <br>
+  No. Games Won: <%= SelectUser.gamesWon %> <br>
+  No. Games Lost: <%= SelectUser.gamesLost %> <br>
+
+</div>
+<br><br>
+
+<div>
+  <form action="/user/profile" method="POST">
+    <input type="text" name="gamerTag" autocomplete="off" placeholder="Enter New Gamer Tag">
+    <input type="submit" value="New Gamer Tag">
+  </form>
+</div>
+
+<%- include("../partials/footer") %>

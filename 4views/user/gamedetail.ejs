@@ -1,0 +1,89 @@
+<%- include("../partials/header") %>
+
+<nav>
+    <a href="/user"> Go Back </a>
+</nav>
+
+<h1> Game Detail </h1>
+
+<table>
+    <thead>
+      <tr>
+        <th> Name </th>
+        <th> Description </th>
+        <th> Amount </th>
+        <th> Penalty </th>
+        <th> Expire Date </th>
+        <th> Winner </th>
+        <th> Player 1 </th>
+        <th> Player 2 </th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <tr>
+        <td> <%= Game.title %> </td>
+        <td> <%= Game.description %> </td>
+        <td> <%= Game.amount %> </td>
+        <td> <%= Game.penalty %> </td>
+        <td> <%= (Game.expiration) ? Game.expiration.toLocaleDateString() : "N/A" %> </td>
+        <td> <%= (Game.winner) ? Game.winner : "TBD" %> </td>
+        <td> <%= Game.player1gamerTag %> </td>
+        <td> <%= Game.player2gamerTag %> </td>
+      </tr>
+    </tbody>
+</table>
+<br><br><br>
+
+
+
+<!-- Update -->
+<form action="/user/<%= Game._id%>/edit" method="POST">
+    <label> Update Game Name: </label>
+    <input type="text" name="title" autocomplete="off">
+    <br><br>
+    
+    <label> Update Game Description: </label>
+    <input type="text" name="description" autocomplete="off">
+    <br><br>
+
+    <label> Update Amount: </label>
+    <input type="number" name="amount" min="0" autocomplete="off">
+    <br><br>
+    
+
+    <label> or Penalty: </label>
+    <input type="text" name="penalty" autocomplete="off">
+    <br><br>
+    
+
+    <label> Update Expiration: </label>
+    <input type="date" name="expiration">
+    <br><br>
+
+    <input type="submit" value="Update Game Values"> 
+</form>
+
+<br><br><br>
+<!-- DELETE GAME --> 
+<!-- 3000/user/123/delete -->
+<h2> Cancel This Bet </h2>
+<form action="/user/<%= Game._id%>/delete" method="POST">
+  <button type="submit"> Cancel Bet</button>
+</form>
+
+
+
+
+
+
+
+    
+   
+ 
+
+
+
+
+
+<%- include("../partials/footer") %>
