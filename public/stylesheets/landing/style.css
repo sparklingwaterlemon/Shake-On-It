@@ -11,6 +11,9 @@ nav {
     height: 120px;
     overflow: hidden;
 }
+nav .post-login{
+    float: left;
+}
 nav .login {
     float: right;
     padding: 20px 50px 20px 20px;
