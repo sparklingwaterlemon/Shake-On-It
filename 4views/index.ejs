@@ -1,4 +1,25 @@
-<%- include("./partials/header") %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='/stylesheets/landing/style.css' />
+  <title> Winner's Only </title>
+
+  <!-- bringing in google font for nav bar -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- google font for main title h1 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
 <nav>     
   <% if (user){ %>
       <a href="/user" <%= title="Userpage" ? 'class="active"' : '' %>> User Page </a>
@@ -9,11 +30,15 @@
         <br><br>
   <% } else { %>
     <a href="/auth/google" class="login"><img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <span class="login"> Log in! </span>
+    <span class="login-message"> SIGN IN WITH </span>
   <% } %>
 </nav>
-<main>
 
+
+<br><br><br>
+<h1><span id="title"> "Shake On it !" </span></h1>
+
+<br>
 
 <div>
   <h2>
@@ -28,7 +53,6 @@
     <strong> well, do I have the solution for you </strong>
   </h3>
 
-  <h1> "SHAKE ON IT" </h1>
 </div>
 <br><br>
 
@@ -79,4 +103,5 @@
 
 
 
-<%- include("./partials/footer") %>
+</body>
+</html>

@@ -1,0 +1,92 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-image: linear-gradient(black, rgb(61, 61, 61));
+    color: rgb(247, 141, 200);
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    background-color: black;
+    height: 120px;
+    overflow: hidden;
+}
+nav .login {
+    float: right;
+    padding: 20px 50px 20px 20px;
+}
+.login img {
+    height: 41px;
+    filter:
+        drop-shadow(0px 0px 1px black)
+        drop-shadow(0px 0px 10px rgb(254, 254, 229)) 
+        drop-shadow(0px 0px 3px rgb(252, 255, 226));  
+}
+.login img:hover {
+    filter:
+    drop-shadow(10px -10px 8px white)
+    drop-shadow(10px 10px 8px yellow)
+    drop-shadow(-10px 10px 8px orange)
+    drop-shadow(-10px -10px 8px dodgerblue);
+}
+nav .login-message{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(254, 205, 114);
+    float: right;
+    margin: 28px 20px 0px 0px;
+}
+
+#title {
+    font-family: 'Sacramento', cursive;
+    font-size: 150px;
+    padding: 20px;
+
+    animation: pulsate .11s ease-in-out infinite alternate;
+    color: rgb(214, 250, 238);
+}
+
+@keyframes pulsate {
+    100% {
+      /* Larger blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #0fa,
+        0 0 80px #0fa,
+        0 0 90px #0fa,
+        0 0 100px #0fa,
+        0 0 150px #0fa;
+    }
+   0% {
+      /* A slightly smaller blur radius */
+      text-shadow:
+        0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px #0fa,
+        0 0 73px #0fa,
+        0 0 80px #0fa,
+        0 0 94px #0fa,
+        0 0 140px #0fa;
+    }
+}
+
+table {
+    margin: 30px 30px 80px 30px;
+    border-collapse: collapse;
+}
+
+table th {
+    border: 1px solid #0fa;
+    padding: 5px;
+    text-align: center;
+}
+  
+table td {
+    border: 1px solid #0fa;
+    padding: 5px;
+    text-align: center;
+}
+  
+  
