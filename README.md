@@ -86,7 +86,7 @@ user = {
 }...
 
 - if you can't find friend send email invite nodemon mailer *******
-
+- want user's to be able to challenge and create games without logging in
 - create 3000/Master
 where you have all games and all users
 and can edit and delete
@@ -94,3 +94,5 @@ and can edit and delete
 - if you change usernames your games will disappears.. fix this..
 - update so found by user id not user gamertag
 - microtransactions , hold the user's bet money? == guarantee payout for friends
+
+- like pool game in your iphone messsage -> simple app

@@ -42,7 +42,7 @@ function searchFriend(req, res) {
         }
         // if searching gamer tag is NOT your own gamer tag AND if it's not already in your friend's array
         if(searchTag !== SelectUser.gamerTag && searchTagIndex == false){
-            SelectUser.friendId.push(foundUser._id); // adding friends's id to user's {friend's id: array}
+            // SelectUser.friendId.push(foundUser._id); // adding friends's id to user's {friend's id: array}
             SelectUser.friendTag.push(searchTag); // adding friends gamer tag to user's {friend tag: array}
 
             SelectUser.save(function (err) {
